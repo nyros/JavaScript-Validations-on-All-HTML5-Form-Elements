@@ -5,7 +5,10 @@ JavaScript-Validations-on-All-HTML5-Form-Elements
   
 1.ABOUT THIS APPLICATION:-
 ----------------------------------------
-	The main use of the application is to validate a HTML5 FORM Elements using JAVASCRIPT . Here we can check each field whether it is in given format or not. At the top of the form there is a progress bar which increments on  successful completion of each form element. After successful completion of all form elements the form displays a success message on the top of the form.
+	The main use of the application is to validate a HTML5 FORM Elements using JAVASCRIPT . Here we can check each 
+	field whether it is in given format or not. At the top of the form there is a progress bar which increments on  
+	successful completion of each form element. After successful completion of all form elements the form displays a
+	success message on the top of the form.
 
 
 2.SKELETON STRUCTURE OF THE FORM:-
@@ -45,15 +48,16 @@ JavaScript-Validations-on-All-HTML5-Form-Elements
 3.THE APPLICATION CONSISTS :-
 -------------------------------------------
 
-	index.html :- This consists of the form details such as the elements (Textbox , radio			button, combobox ,etc ) we used in the form and what way we have taken. 
+	index.html :- This consists of the form details such as the elements (Textbox , radio button, combobox ,etc ) we
+	used in the form and what way we have taken. 
 
-	css.css :-  This had been existed in the css folder which is an external style sheet that has 		been linked in the html for applying styles to the elements in the html file.
+	css.css :-  This had been existed in the css folder which is an external style sheet that has been linked in the
+	html for applying styles to the elements in the html file.
 
-	
-	
-	js.js :- This had been existed in the js folder of the application that is linked through 			the html file.This consists of the validation functions that have been applied 			to the form elements.
+	validate.js :- This had been existed in the js folder of the application that is linked through the html file.
+	This consists of the validation functions that have been applied to the form elements.
 
-	Images :- This folder consists of the images that we have applied for the elements of the 			    form.
+	images :- This folder consists of the images that we have applied for the elements of the form.
 
 	screenshot :- This is the screen shot of the main form.
 
