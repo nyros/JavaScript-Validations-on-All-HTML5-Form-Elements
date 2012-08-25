@@ -63,4 +63,4 @@ JavaScript-Validations-on-All-HTML5-Form-Elements
 
 
 
-<img style="max-width:100%;" src="https://github.com/veerababu-nyros/JavaScript-Validations-on-All-HTML5-Form-Elements.git/screenshot.bmp" alt="login" title="login">
+<img style="max-width:100%;" src="https://github.com/veerababu-nyros/JavaScript-Validations-on-All-HTML5-Form-Elements.git/raw/master/screenshot.bmp" alt="login" title="login">
