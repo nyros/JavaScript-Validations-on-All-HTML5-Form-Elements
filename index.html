@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JavaScript-Validations-on-All-HTML5-Form-Elements</title>
+
+<link rel="stylesheet" href="css/css.css" type="text/css">
+<script type="text/javascript" src="js/validate.js"> </script>
+
+</head>
+
+<body>
+	<!--For Progress Bar-->
+	<div id="top" style="width:660px;margin:20px auto 10px;overflow:hidden"> <span> Status </span>
+		<div class="progress progress-striped active" style="width:530px;float:left">
+		<div id="prog" class="bar"
+		style="width:2%;"></div>
+		</div> <span id="per"> 0%</span>
+    </div>
+	
+	<!--For Alert Box after successful submition-->
+	<div id="alert" class="alert" style="visibility:hidden;width:600px;margin:0 auto 10px;">
+		<button id="close" class="close" data-dismiss="alert" type="button" onClick="funClose()">×</button>
+		<strong>Welldone!</strong>
+		You are successfully registered
+	</div>
+	
+	<!--Form-->
+	<form id="frm1"  action="" onSubmit="return formValidator()">
+		<h2> Application Form </h2>
+		<fieldset>
+			<legend> <h3> Account Information </h3></legend>
+			<div id="name" class="row">
+				<label class="label" for="username">  UserName *</label>
+				<div id="user" class="collection">
+					<input id="username" class="fieldValInit" type="text" aria-required="true" autocomplete="off" minleght="5" maxlength="8" size="32" value="" name="username" title="User Name" tabindex="1">
+				</div>
+			</div>
+			<div id="pass" class="row ">
+				<label class="label" for="password">Password *</label>
+				<div class="collection">
+					<input id="password" class="" type="password" aria-required="true" maxlength="6" size="32" value="" name="password" tabindex="1">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend> <h3> Profile Information </h3></legend>
+			<div id="first" class="row">
+				<label class="label" for="firstname"> First Name *</label>
+				<div id="first" class="collection">
+					<input id="firstname" class="fieldValInit" type="text" aria-required="true" autocomplete="off" minleght="2" maxlength="6" size="32" value="" name="firstname" title="First Name" tabindex="1">
+				</div>
+			</div>
+			<div id="last" class="row">
+				<label class="label" for="lastname"> Last Name *</label>
+				<div id="name" class="collection">
+					<input id="lastname" class="fieldValInit" type="text" aria-required="true" autocomplete="off" minleght="2" maxlength="15" size="32" value="" name="lastname" title="Last Name" tabindex="1">
+				</div>
+			</div>
+			<div id="profile" class="row">
+				<label class="label" for="lastname"> Profile Pic *</label>
+				<div id="profile" class="collection">
+					<input id="profilepic" class="fieldValInit" type="file" aria-required="true" autocomplete="off" maxlength="32" value="" name="profilepic" title="Profile picture" tabindex="1" style="text-indent:0;">
+				</div>
+			</div>
+			<div id="gender" class="row" > 
+				<label class="label" for="gendercollection"> Gender * </label>
+				<div id="gendercollection" class="collection">
+					<input type="radio" id="male" name="radio" checked style="width:50px;"> Male  <br>
+					<input type="radio" id="female" name="radio" style="width:50px;"> Female
+				</div>
+			</div>
+			<div id="dobFld" class="row">
+				<label class="label" for="birthdategroup">Date of Birth *</label>
+				<div id="birthdategroup" class="collection" title="Birthday">
+					<input id="dd" class="dateInput fieldValInit" type="text" aria-required="true" autocomplete="off" maxlength="2" size="32" value="" name="dd" title="Date" tabindex="1">
+					<select id="mm" class="" aria-required="true" name="mm" title="Select Month" tabindex="1">
+						<option selected="" value="" title="- Select Month -">Select Month</option>
+						<option value="1" title="January">January</option>
+						<option value="2" title="February">February</option>
+						<option value="3" title="March">March</option>
+						<option value="4" title="April">April</option>
+						<option value="5" title="May">May</option>
+						<option value="6" title="June">June</option>
+						<option value="7" title="July">July</option>
+						<option value="8" title="August">August</option>
+						<option value="9" title="September">September</option>
+						<option value="10" title="October">October</option>
+						<option value="11" title="November">November</option>
+						<option value="12" title="December">December</option>
+					</select>
+					<input id="yyyy" class="dateInput fieldValInit" type="text" aria-required="true" autocomplete="off" maxlength="4" size="32" value="" name="yyyy" title="Year" tabindex="1">
+				</div>
+			</div>
+			<div id="hobbies" class="row" > 
+				<label class="label" for="hobbies"> Hobbies * </label> 
+				<div id="hobbies" class="collection">
+					<input type="checkbox" id="plant" name="hobby[]" checked style="width:50px"><span>Planting </span>
+					<input type="checkbox" id="sing" name="hobby[]" style="width:50px" ><span>Singing</span> <br>
+					<input type="checkbox" id="travel" name="hobby[]" style="width:50px" ><span>Traveling</span> 
+					<input type="checkbox" id="dance" name="hobby[]" style="width:50px" ><span>Dancing</span> <br>
+					<input type="checkbox" id="garden" name="hobby[]" style="width:50px"><span>Gardening</span>
+					<input type="checkbox" id="others" name="hobby[]" style="width:50px" ><span>Others</span> 
+				</div>
+			</div>
+			<div id="country" class="row">
+				 <label class="label" for="country"> Have Been to * </label> 
+				<div id="country" class="collection">
+					<select multiple="multiple" id="cntry" name="cntry">
+						<option> India </option>
+						<option> Australia </option>
+						<option> South Africa </option>
+						<option> England </option>
+						<option> Srilanka </option>
+						<option> Newzealand </option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<legend> <h3> Contact Information </h3> </legend>
+			<div id="contactFld" class="row">
+				<label class="label" for="phone"> Phone * </label>
+				<div id="contact" class="collection">
+					<input type="text" id="phone" name="phone" maxlength="20"> <br>
+					<span> eg: +91 (123)-456-7890 </span>
+				</div>		
+			</div>
+		</fieldset>
+		<fieldset style="text-align:right;border:none;">
+			<input type="submit" value="Submit" id="sub">
+		</fieldset>
+	</form>
+</body>
+</html>
