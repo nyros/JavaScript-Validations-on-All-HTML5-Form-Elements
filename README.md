@@ -42,7 +42,7 @@ JavaScript-Validations-on-All-HTML5-Form-Elements
 
 	Phone * 	<Text Box> [Format: + 91 (990)-824-7888] 
 										
-				[Submit button] [Reset button]
+				[Submit button]
 
 
 3.THE APPLICATION CONSISTS :-
